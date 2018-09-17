@@ -1,0 +1,36 @@
+Unix Notes:
+
+UNIX is an operating system, which is the suite of programs which make a computer work. There are many versions of UNIX, include MacOS X. (Yes, MacBook operating systems are just a version of UNIX. GNU/Linux is another version.)
+
+UNIX operating systems are up of three parts:
+	1. the kernel
+		- the kernel is the hub of the OS because it allocates time and memory (space) to programs and handles the filestore and communications in response to system calls. All of the commands made in the shell are actually programs that communicate with the kernel (e.g. "rm myfile" is a search and request from the shell to the kernel to execute the "rm" program on "myfile")
+	2. the shell
+		- an interface between the user and the kernel
+		- a command line interpreter (CLI)
+			- interprets commands (which are programs) the user types in and arranges for them to be carried out
+		- shells are customizable and switchable
+			- MacOS X uses bash (bourne again shell) by default. You could use zsh (Z shell) - which is an improvement on bash - or another shell as well.
+		- you have special features such as "filename completion" (w/ [tab]) and history (w/ up/down arrow keys)
+	3. the program(s)
+		- everything in UNIX is either a file or a process
+			- process: an executing program (w/ a unique PID, process identifier)
+			- Regular File: collection of data (bits) created by users
+				- -rw....... (marked w/ a "-" character in the mode field)
+				- file types: 
+					Text file (electronic text), 
+					Portable Network Graphic (image, bitmap), Comma-separated values (tabular, delimited), 
+					XML (markup), 
+					Word Document (application, word processing document)
+					Python (source code text)
+					Compiled computer programs (executable/binary)
+				- file extensions: 
+					.txt, .png, .csv, .xml, .doc, .py, [none] (DOS: .EXE)
+			- Special Files:
+				- directory: special file that is a container for files and/or other directories
+					- drw....... (marked w/ a "d" character in the mode field)
+				- symbolic link: (later...) 
+				- named pipe: (later...)
+				- socket: (later...)
+				- device file: (later...)
+				- *door: (only in Solaris)

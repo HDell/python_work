@@ -1,0 +1,214 @@
+List of CS concepts to learn:
+
+Workflow Languages:
+
+- Linux/Unix
+	- bash (Scripting [be cognizant of portability])
+- Git
+- Vi
+
+
+General Programming Languages:
+
+- Python
+- C
+- C++
+- Java
+- JavaScript
+
+- Perl (? for Scripting)
+
+- Scala
+- Kotlin
+- ?Julia
+
+Domain-Specific Langauges:
+
+- Database:
+	- SQL
+		- An RDBMS (MySQL? SQLite?)
+	- MongoDB
+
+Game Engine:
+	- Cocos2d-x
+
+- Markup Language:
+	- XML
+	- HTML
+
+- Style Sheet Language:
+	- CSS
+
+- String Interpretation:
+	- RegEx
+
+Frameworks/Libraries/SDKs/APIs:
+
+- Twilio?
+
+Programming Paradigms:
+
+- Imperative
+	- Procedural Programming
+		- Primitive Data (Types):
+			- Boolean
+			- Character
+			- Floating-point numbers
+				- & Double precision Floats
+			- Fixed-point numbers
+			- Integer
+			- Reference (or Pointer/Handle)
+			- Enumerated type
+		- Expressions and Variables
+		- Order of Precedence
+		- Control Structures:
+			- Loops:
+				- Definite
+					- for
+				- Indefinite:
+					- while
+			- Conditional Execution:
+				- if/else
+		- Random Numbers
+		- boolean Logic
+		- Functions
+			- Anonymous
+		- File Processing 
+		- Input/Output
+		- Composite/Non-Primitive Types:
+			- Arrays
+			- Strings
+			- (Record [?also Tuple/Structure])
+			- (Union)
+			- (Tagged Union)
+		- (Graphics)
+		- Memory Management
+			- Manual Memory Management
+			- Automatic Memory Management
+	- Object Oriented Programming
+		- Classes
+			- Abstract Classes
+			- Concrete Classes
+			- Interfaces (and/or Multiple Inheritance? Duck Typing?)
+			- Anonymous
+		- Objects
+		- Abstraction
+		- Encapsulation
+		- Inheritance
+		- Polymorphism
+			- Runtime
+				- Function Overriding
+			- Compile Time
+				- Function Overloading
+- Declarative
+	- Functional Programming
+
+Data Structures (java-based, find equivalents for other languages):
+
+- ArrayList
+- LinkedList
+- HashSet
+- TreeSet
+	- Search Tree
+- HashMap
+- TreeMap
+- Iterator
+- Stack
+- Queue
+- Binary Tree
+	- Heaps
+		- Min-Heaps
+		- Max-Heaps
+	- +Binary Search Tree
+- Hashing
+	- Collisions
+	- Probing
+	- Clustering
+	- Rehasing
+	- Load Factor
+	- Separate Chaining
+- Priority Queue (+Binary Heap?)
+
+- Abstract Data Types:
+	- Container
+	- List
+	- Typle
+	- Associative Array
+	- Multipmap
+	- Heap
+	- Set
+	- Multiset (bag)
+	- Stack
+	- Queue
+		- Double-ended Queue
+		- Priority Queue
+	- Tree
+	- Graph
+
+Algorithms:
+
+- Cumulative Algorithms 
+- Recursion
+- Searching
+	- Squential Search
+	- Binary Search
+	- +Red-Black Tree
+	- +Hash Table
+- Sorting
+	- Bogo Sort
+	- Bubble Sort
+	- Selection Sort
+	- Insertion Sort
+	- Merge Sort
+	- Heap Sort
+	- Quick Sort
+	- ?Bucket Sort
+- Comparing Objections
+- +Graphs
+	- Depth-first Search
+	- Breadth-first Search
+	- Minimum Spanning Trees
+	- Shortest Paths
+- +Strings
+	- Str
+	- Radix Sorting
+	- Substring Search
+	- Tries
+	- RegEx
+	- Data Compression
+
+Useful CS Concepts (teachyourselfcs.com): 
+...
+- Computer Architecture
+...
+- Operating Systems
+- Computer Networking
+...
+- Databases
+...
+- Languages and Compilers
+...
+- Distributed Systems
+
+Math & CS Subjects:
+
+- CS:
+	- Runtime Efficiency
+	- Growth Rates
+	- Complexity Classes
+- Maths:
+	- Discrete Mathematics*
+	- Precalculus
+	- Calculus
+	- Linear Algebra
+	- Statistics
+	- Probability Theory
+- Both:
+	- (Binary)
+	- Bitwise Operations
+
+(After Calculus and Linear Algebra: Physics)
+(After Physics: Electronics)
+
+Look in to ?:
+node.js

@@ -1,0 +1,13 @@
+Python order of operations follows PEMDAS (precedence).
+
+If there are two operations that have the same level, the order of operations will move from left to right.
+
+Two exponentiations in a row moves from right to left.
+
+TO-DO: Write the c2f.py program yourself. (Simple conversion programs.)
+
+Single alternative if-statement:
+	if <condition>:
+	... <do_task> #task will run if condition evals to TRUE and will not run if it evals to FALSE
+
+Style note: Don't ever use the tab key to indent in Python (use spaces)
