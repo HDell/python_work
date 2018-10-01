@@ -5,38 +5,81 @@ import random
 
 #functions
 def validate_input(num):
-  pass
+  if num > 1:
+    return True
+  else:
+    print("Invalid Entry (integer must be greater than 0)")
+    return False
 
-def random_number_generator(list_arg):
+def random_number_generator():
+  rand_number_list = []
   for i in range(0,1000):
-    list_arg.append(random.randrange(10,21))
-  print(len(list_arg))
-  average = sum(list_arg)/len(list_arg)
+    rand_number_list.append(random.randrange(10,21))
+  print(len(rand_number_list))
+  average = sum(rand_number_list)/len(rand_number_list)
   print("The mean of the random ints is:", average)
 
-def one_horse_race(list_arg):
+def one_horse_one_race():
+  horse_miles = []
   seconds = 0
-  while sum(list_arg) < miles_in_feet:
-    list_arg.append(random.randrange(4,41))
+  while sum(horse_miles) < miles_in_feet:
+    horse_miles.append(random.randrange(4,41))
     seconds = seconds + 1
   print("seconds for 1 horse, 1 race:", seconds)
-  print("length of the list is:", len(list_arg))
-  print("feet ran by horse is:", sum(list_arg))
+  print("length of the list is:", len(horse_miles))
+  print("feet ran by horse is:", sum(horse_miles))
 
-#1 horse, multiple races
+def one_horse_multiple_races():
+  horse_miles = []
+  average_seconds = []
+  seconds = 0
+  for i in range(0,1000):
+    while sum(horse_miles) < miles_in_feet:
+      horse_miles.append(random.randrange(4,41))
+      seconds = seconds + 1
+    average_seconds.append(seconds)
+    horse_miles.clear()
+    seconds = 0
+  average = sum(average_seconds)/len(average_seconds)
+  print("The average number of seconds for horse to complete race is:", average)
 
-#multiple horses, 1 race
+def multiple_horses_one_race():
+  distances = []
+  seconds = 0
+  num_horses = 0
+  race_won = False
+  winners = []
+  ordered_winners = []
+
+  num_horses = int(input("Please enter the number of horses in this race (greater than 1): "))
+  if validate_input(num_horses):
+    for i in range(0,num_horses):
+      distances.append(0)
+    while race_won == False:
+      for i in range(0,num_horses):
+        distances[i] = distances[i] + random.randrange(4,41)
+        if distances[i] >= miles_in_feet:
+          race_won = True
+          winners.append(i+1)
+      seconds = seconds + 1
+    winners.sort
+    print(winners)
+
+
+
+    
+    print(distances, seconds)
+
 
 #multiple horse names, 1 race
 
 #initializations
-rand_number_list = []
-horse_one = []
 miles_in_feet = 10560
 
 #program
 
-random_number_generator(rand_number_list)
-one_horse_race(horse_one)
-
+random_number_generator()
+one_horse_one_race()
+one_horse_multiple_races()
+multiple_horses_one_race()
 
