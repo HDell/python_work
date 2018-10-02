@@ -19,6 +19,9 @@ def random_number_generator():
   average = sum(rand_number_list)/len(rand_number_list)
   print("The mean of the random ints is:", average)
 
+def getKey(list_item):
+  return list_item[0]
+
 def one_horse_one_race():
   horse_miles = []
   seconds = 0
@@ -44,6 +47,8 @@ def one_horse_multiple_races():
   print("The average number of seconds for horse to complete race is:", average)
 
 def multiple_horses_one_race():
+  horse_list = [] #[(distance, horse #),(distance, horse #),(distance, horse #),(distance, horse #)]
+
   distances = []
   seconds = 0
   num_horses = 0
@@ -60,19 +65,21 @@ def multiple_horses_one_race():
         distances[i] = distances[i] + random.randrange(4,41)
         if distances[i] >= miles_in_feet:
           race_won = True
-          winners.append(i+1)
+          winners.append((distances[i],i+1))
       seconds = seconds + 1
-    winners.sort
-    print(winners)
+      if seconds%10 == 0:
+        print(distances, seconds)
+    ordered_winners = (sorted(winners, key=getKey, reverse=True))
+    print(sorted(winners, key=getKey, reverse=True))
+
+    print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0],"miles!")
+
+    print(distances, seconds)
 
 
 
     
-    print(distances, seconds)
-
-    for i in range(0,len(winners)):
-      print(distances[winners[i]-1])
-      ordered_winners.append(distances[winners[i]-1])
+    
 
     
 
