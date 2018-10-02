@@ -70,6 +70,13 @@ def multiple_horses_one_race():
     
     print(distances, seconds)
 
+    for i in range(0,len(winners)):
+      print(distances[winners[i]-1])
+      ordered_winners.append(distances[winners[i]-1])
+
+    
+
+
 
 #multiple horse names, 1 race
 
