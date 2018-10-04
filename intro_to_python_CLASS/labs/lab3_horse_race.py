@@ -1,5 +1,5 @@
 # Handell Desulme Section 4 Lab3
-# This program will 
+# This program will progressivley simulate horse races.
 
 import random
 
@@ -19,9 +19,6 @@ def random_number_generator(): #part a
   average = sum(rand_number_list)/len(rand_number_list)
   
   print("The mean of the random ints is:", average) #main output
-
-def getKey(list_item):
-  return list_item[0]
 
 def one_horse_one_race(): #part b
   horse_miles = []
@@ -49,8 +46,10 @@ def one_horse_multiple_races(): #part c
   
   print("The average number of seconds for horse to complete race is:", average) #main output
 
+def getKey(list_item):
+  return list_item[0]
+
 def multiple_horses_one_race(): #part e
-  horse_list = [] #[(distance, horse #),(distance, horse #),(distance, horse #),(distance, horse #)]
 
   distances = []
   seconds = 0
@@ -79,7 +78,6 @@ def multiple_horses_one_race(): #part e
     #print(distances, seconds)
 
 def horse_names_one_race(): #part e
-  horse_list = [] #[(distance, horse #),(distance, horse #),(distance, horse #),(distance, horse #)]
 
   distances = []
   seconds = 0
