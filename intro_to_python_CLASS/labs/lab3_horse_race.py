@@ -8,31 +8,33 @@ def validate_input(num):
   if num > 1:
     return True
   else:
-    print("Invalid Entry (integer must be greater than 0)")
+    print("Invalid Entry (number (integer) of horses must be greater than 0)")
     return False
 
-def random_number_generator():
+def random_number_generator(): #part a
   rand_number_list = []
   for i in range(0,1000):
     rand_number_list.append(random.randrange(10,21))
   print(len(rand_number_list))
   average = sum(rand_number_list)/len(rand_number_list)
-  print("The mean of the random ints is:", average)
+  
+  print("The mean of the random ints is:", average) #main output
 
 def getKey(list_item):
   return list_item[0]
 
-def one_horse_one_race():
+def one_horse_one_race(): #part b
   horse_miles = []
   seconds = 0
   while sum(horse_miles) < miles_in_feet:
     horse_miles.append(random.randrange(4,41))
     seconds = seconds + 1
-  print("seconds for 1 horse, 1 race:", seconds)
-  print("length of the list is:", len(horse_miles))
-  print("feet ran by horse is:", sum(horse_miles))
+  
+  print("seconds for 1 horse, 1 race:", seconds) #main output
+  #print("length of the list is:", len(horse_miles)) #same as seconds
+  #print("feet ran by horse is:", sum(horse_miles))
 
-def one_horse_multiple_races():
+def one_horse_multiple_races(): #part c
   horse_miles = []
   average_seconds = []
   seconds = 0
@@ -44,9 +46,10 @@ def one_horse_multiple_races():
     horse_miles.clear()
     seconds = 0
   average = sum(average_seconds)/len(average_seconds)
-  print("The average number of seconds for horse to complete race is:", average)
+  
+  print("The average number of seconds for horse to complete race is:", average) #main output
 
-def multiple_horses_one_race():
+def multiple_horses_one_race(): #part e
   horse_list = [] #[(distance, horse #),(distance, horse #),(distance, horse #),(distance, horse #)]
 
   distances = []
@@ -67,16 +70,52 @@ def multiple_horses_one_race():
           race_won = True
           winners.append((distances[i],i+1))
       seconds = seconds + 1
-      if seconds%10 == 0:
-        print(distances, seconds)
     ordered_winners = (sorted(winners, key=getKey, reverse=True))
-    print(sorted(winners, key=getKey, reverse=True))
+    #print(sorted(winners, key=getKey, reverse=True))
 
-    print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0],"miles!")
+    print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0],"feet in", seconds, "seconds!") #main output
+    #print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0]/(miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
 
-    print(distances, seconds)
+    #print(distances, seconds)
+
+def horse_names_one_race(): #part e
+  horse_list = [] #[(distance, horse #),(distance, horse #),(distance, horse #),(distance, horse #)]
+
+  distances = []
+  seconds = 0
+  horse_names = []
+  horse_name = ""
+  race_won = False
+  winners = []
+  sorted_winners = []
+
+  horse_name = input("Please enter the name of the first competing horse in this race ('XXX is invalid'): ")
+  while horse_name != "XXX":
+    horse_names.append(horse_name)
+    horse_name = input("Please enter the name of the next competing horse in this race (enter 'XXX' to stop): ")
+  if validate_input(len(horse_names)):
+    for i in range(0,len(horse_names)):
+      distances.append(0)
+    while race_won == False:
+      for i in range(0,len(horse_names)):
+        distances[i] = distances[i] + random.randrange(4,41)
+        if distances[i] >= miles_in_feet:
+          race_won = True
+          winners.append((distances[i],horse_names[i]))
+      seconds = seconds + 1
+      if seconds%10 == 0:
+        pass
+        print(seconds, "seconds into the race, we have:")
+        for i in range(len(horse_names)):
+          print(horse_names[i], "at", distances[i], "feet") #secondary output
+    sorted_winners = (sorted(winners, key=getKey, reverse=True))
+    #print(sorted(winners, key=getKey, reverse=True))
+
+    print("The winning horse is",sorted_winners[0][1],"with a distance of",sorted_winners[0][0],"feet in", seconds, "seconds!") #main output
+    #print("The winning horse is",sorted_winners[0][1],"with a distance of",sorted_winners[0][0]/(miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
 
 
+    #print(distances, horse_names, seconds)
 
     
     
@@ -92,8 +131,9 @@ miles_in_feet = 10560
 
 #program
 
-random_number_generator()
-one_horse_one_race()
-one_horse_multiple_races()
-multiple_horses_one_race()
+random_number_generator() #part a
+one_horse_one_race() #part b
+one_horse_multiple_races() #part c
+multiple_horses_one_race() #part d
+horse_names_one_race() #part e
 
