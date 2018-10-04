@@ -23,7 +23,7 @@ def random_number_generator(): #part a
 def one_horse_one_race(): #part b
   horse_miles = []
   seconds = 0
-  while sum(horse_miles) < miles_in_feet:
+  while sum(horse_miles) < two_miles_in_feet:
     horse_miles.append(random.randrange(4,41))
     seconds = seconds + 1
   
@@ -36,7 +36,7 @@ def one_horse_multiple_races(): #part c
   average_seconds = []
   seconds = 0
   for i in range(0,1000):
-    while sum(horse_miles) < miles_in_feet:
+    while sum(horse_miles) < two_miles_in_feet:
       horse_miles.append(random.randrange(4,41))
       seconds = seconds + 1
     average_seconds.append(seconds)
@@ -65,7 +65,7 @@ def multiple_horses_one_race(): #part e
     while race_won == False:
       for i in range(0,num_horses):
         distances[i] = distances[i] + random.randrange(4,41)
-        if distances[i] >= miles_in_feet:
+        if distances[i] >= two_miles_in_feet:
           race_won = True
           winners.append((distances[i],i+1))
       seconds = seconds + 1
@@ -73,7 +73,7 @@ def multiple_horses_one_race(): #part e
     #print(sorted(winners, key=getKey, reverse=True))
 
     print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0],"feet in", seconds, "seconds!") #main output
-    #print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0]/(miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
+    #print("The winning horse is horse number",ordered_winners[0][1],"with a distance of",ordered_winners[0][0]/(two_miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
 
     #print(distances, seconds)
 
@@ -97,7 +97,7 @@ def horse_names_one_race(): #part e
     while race_won == False:
       for i in range(0,len(horse_names)):
         distances[i] = distances[i] + random.randrange(4,41)
-        if distances[i] >= miles_in_feet:
+        if distances[i] >= two_miles_in_feet:
           race_won = True
           winners.append((distances[i],horse_names[i]))
       seconds = seconds + 1
@@ -110,22 +110,11 @@ def horse_names_one_race(): #part e
     #print(sorted(winners, key=getKey, reverse=True))
 
     print("The winning horse is",sorted_winners[0][1],"with a distance of",sorted_winners[0][0],"feet in", seconds, "seconds!") #main output
-    #print("The winning horse is",sorted_winners[0][1],"with a distance of",sorted_winners[0][0]/(miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
-
+    #print("The winning horse is",sorted_winners[0][1],"with a distance of",sorted_winners[0][0]/(two_miles_in_feet/2),"miles in", seconds, "seconds!") #alt. output
 
     #print(distances, horse_names, seconds)
 
-    
-    
-
-    
-
-
-
-#multiple horse names, 1 race
-
-#initializations
-miles_in_feet = 10560
+two_miles_in_feet = 10560 #global constant
 
 #program
 
